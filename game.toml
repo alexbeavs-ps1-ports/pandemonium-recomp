@@ -1,0 +1,59 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Pandemonium!"
+id = "SLUS-00232"
+players = 1
+exe = "disc/SLUS_002.32"
+disc = "disc/Pandemonium! (USA) (Rev 1).cue"
+discs = ["disc/Pandemonium! (USA) (Rev 1).cue"]
+disc_serials = ["SLUS-00232"]
+load_address = "0x801F8000"
+entry_pc = "0x801FBE4C"
+text_size = "0x00005800"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Pandemonium! (USA) (Rev 1) (Track 1).bin"
+cue_name = "Pandemonium! (USA) (Rev 1).cue"
+boot_exe = "SLUS_002.32"
+known_sizes = [225314544]
+known_md5 = [
+  "9d82d4ab02f27e4bdee328364cb32a3d",
+]
+known_sha1 = [
+  "35938c910d26bf5a79e1c3058a794f1278f85960",
+]
+known_crc32 = [
+  "1294599d",
+]
+
+[recompiler]
+bios_config = "psxrecomp/bios/SCPH1001.toml"
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+openbios = false
+bios_hle = false
+window_title = "Pandemonium! Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 3
+required_disc_fp = "2eccebc52aafcf5916a83bc2f9b8666396e133692c7018c2435edaccc56951b6"

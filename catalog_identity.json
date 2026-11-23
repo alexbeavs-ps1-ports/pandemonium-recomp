@@ -1,0 +1,46 @@
+{
+  "format_version": 1,
+  "game": {
+    "name": "Pandemonium!",
+    "id": "SLUS-00232",
+    "boot_exe": "SLUS_002.32"
+  },
+  "marketing": {
+    "description": "",
+    "publisher": "",
+    "year": "",
+    "region": "USA",
+    "players": 1
+  },
+  "rom_identity": {
+    "cue_name": "Pandemonium! (USA) (Rev 1).cue",
+    "bin_name": "Pandemonium! (USA) (Rev 1) (Track 1).bin",
+    "track_counts": [
+      3
+    ],
+    "require_cue": true,
+    "data_track": {
+      "size": 225314544,
+      "md5": "9d82d4ab02f27e4bdee328364cb32a3d",
+      "sha1": "35938c910d26bf5a79e1c3058a794f1278f85960",
+      "crc32": "1294599d"
+    },
+    "disc_fp": "2eccebc52aafcf5916a83bc2f9b8666396e133692c7018c2435edaccc56951b6"
+  },
+  "exe": {
+    "load_address": "0x801F8000",
+    "entry_pc": "0x801FBE4C",
+    "text_size": "0x00005800",
+    "stack_base": "0x801FFFF0"
+  },
+  "seeds": {
+    "count": 68,
+    "source": "boot_exe_jal"
+  },
+  "warnings": [],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}

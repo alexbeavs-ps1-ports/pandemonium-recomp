@@ -1,0 +1,38 @@
+{
+  "cue_path": "disc/Pandemonium! (USA) (Rev 1).cue",
+  "cue_name": "Pandemonium! (USA) (Rev 1).cue",
+  "bin_name": "Pandemonium! (USA) (Rev 1) (Track 1).bin",
+  "track_count": 3,
+  "data_track_size": 225314544,
+  "data_track_md5": "9d82d4ab02f27e4bdee328364cb32a3d",
+  "data_track_sha1": "35938c910d26bf5a79e1c3058a794f1278f85960",
+  "data_track_crc32": "1294599d",
+  "boot_exe": "SLUS_002.32",
+  "serial": "SLUS-00232",
+  "serial_exe": "SLUS_002.32",
+  "volume_id": "SLUS_00232",
+  "display_name": "Pandemonium! (USA) (Rev 1)",
+  "load_address": "0x801F8000",
+  "entry_pc": "0x801FBE4C",
+  "text_size": "0x00005800",
+  "stack_base": "0x801FFFF0",
+  "require_cue": true,
+  "required_disc_fp": "2eccebc52aafcf5916a83bc2f9b8666396e133692c7018c2435edaccc56951b6",
+  "boot_exe_sha256": "3a4a97501fc075869697fb32135a0ec587943f714db6aef521479a56a09a3a56",
+  "boot_exe_size": 24576,
+  "boot_exe_page_crc32": [
+    "68885b86",
+    "2334508e",
+    "c29baca5",
+    "de0d5683",
+    "c71c0011",
+    "1ccc6b38"
+  ],
+  "seed_count": 68,
+  "warnings": [],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}
